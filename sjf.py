@@ -31,10 +31,12 @@ def readProcessesFromFile(inputDir = 'sjf.txt'):
 
 
 def sjf(arrivedAt, servicedFor, numeration):
+    # num, arrival, serviceTimes, start, completion, TurnAroundT, WaitingT
     results = [[] for i in range(7)]
     time = 0
     arriveCurrent = []
     serviceCurrent = []
+
     while arrivedAt or arriveCurrent:
         # when there are new processes(time)
         while arrivedAt:
@@ -46,7 +48,7 @@ def sjf(arrivedAt, servicedFor, numeration):
             else:
                 break
         
-        # waiting for proceses, when nothing to do
+        # waiting for processes, when nothing to do
         position = posOfShortestProcess(serviceCurrent)
         if position == -1:
             time += 1
