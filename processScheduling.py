@@ -230,7 +230,7 @@ if __name__ == "__main__":
     del fileTmp
     results = rr(numbers, arriveTimes, serviceTimes)
     outputText = transform(results, 1)
-    results.remove()
+    del results
     writeToFile(outputText, 'rrResults.txt')
     # sjf
     fileTmp = readProcessesFromFile('sjf.txt')
