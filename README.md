@@ -1,4 +1,4 @@
-# ProcessSchedulingAlgorithmsAndPageReplacement
+# ProcessSchedulingAndPageReplacementAlgorithms
 shortest job first
 soon round-robin
 
